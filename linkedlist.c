@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "linked list.h"
 // Function to create a new node
 struct node *newNode(char *data)
 {
