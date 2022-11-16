@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "linked list.h"
 // Function to create a new node
 struct node *newNode(char *data)
 {
@@ -92,28 +91,4 @@ printf("%s ", node->data);
 node = node->next;
 }
 }
-// Function to reverse the linked list
-void reverse(struct node **head)
-{
-struct node *prev = NULL;
-struct node *current = *head;
-struct node *next = NULL;
-while (current != NULL)
-{
-next = current->next;
-current->next = prev;
-prev = current;
-current = next;
-}
-*head = prev;
-}
-// Function to find the middle of the linked list
-void findMiddle(struct node *head)
-{
-struct node *slow = head;
-struct node *fast = head;   if (head != NULL)
-{       while (fast != NULL && fast->next != NULL)
-{           fast = fast->next->next;
-slow = slow->next;
-}
-printf("The middle element is [%s]
+
